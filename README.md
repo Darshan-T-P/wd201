@@ -1,1 +1,1 @@
-This project demonstrates our developer setup
+This is a first projetc

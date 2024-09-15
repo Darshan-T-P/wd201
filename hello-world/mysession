@@ -1,0 +1,11 @@
+console.log("Hello")
+const printlog=()=>{
+console.log("Hello, World")
+}
+printlog()
+str="Welcome to Node"
+str.toLowerCase
+
+str.toLowerCase()
+'My name is ${_}'
+`My name is ${_}`
