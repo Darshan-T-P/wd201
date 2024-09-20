@@ -10,28 +10,26 @@ const todoList = () => {
   const overdue = () => {
     // Write the date check condition here and return the array
     // of overdue items accordingly.
-    const over = all.filter((tasks) => {
-      tasks.dueDate < today;
-    });
-    return over;
+    const over=(tasks)=>{
+        return tasks.dueDate<today;
+    }
+
+    return all.filter(over);
   };
 
   const dueToday = () => {
     // Write the date check condition here and return the array
     // of todo items that are due today accordingly.
-    const now = all.filter((tasks) => {
-      tasks.dueDate === today;
-    });
-    return now;
-  };
+     return all.filter((tasks) => tasks.dueDate === today);
+};
 
   const dueLater = () => {
     // Write the date check condition here and return the array
     // of todo items that are due later accordingly.
-    const late = all.filter((tasks) => {
-      tasks.dueDate > today;
-    });
-    return late;
+    const late = (tasks) => {
+      return tasks.dueDate > today;
+    };
+    return all.filter(late);
   };
 
   const toDisplayableList = (list) => {
