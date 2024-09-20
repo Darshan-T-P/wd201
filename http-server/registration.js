@@ -24,6 +24,7 @@ const retrieveEntries = () => {
 }
 
 // Initialize entries with existing data from localStorage
+// eslint-disable-next-line no-unused-vars
 let user_Entries = retrieveEntries();
 
 const displayEntries = () => {
@@ -117,6 +118,7 @@ const validAge = () => {
 
 const validemail =()=>{
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // eslint-disable-next-line no-undef
     return regex.test(email);
 }
 // Add event listener for form submission
