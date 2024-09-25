@@ -1,0 +1,16 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "description": "A todo application",
+  "main": "todo.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "author": "Darshan T P <darshantp13@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "jest": "^29.7.0"
+  }
+}
