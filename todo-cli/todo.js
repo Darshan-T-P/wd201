@@ -11,9 +11,9 @@ const todoList = () => {
   const overdue = () => {
     // Write the date check condition here and return the array
     // of overdue items accordingly.
-    const over=(tasks)=>{
-        return tasks.dueDate<today;
-    }
+    const over = (tasks) => {
+      return tasks.dueDate < today;
+    };
 
     return all.filter(over);
   };
@@ -21,8 +21,8 @@ const todoList = () => {
   const dueToday = () => {
     // Write the date check condition here and return the array
     // of todo items that are due today accordingly.
-     return all.filter((tasks) => tasks.dueDate === today);
-};
+    return all.filter((tasks) => tasks.dueDate === today);
+  };
 
   const dueLater = () => {
     // Write the date check condition here and return the array
@@ -68,10 +68,10 @@ const formattedDate = (d) => {
 var dateToday = new Date();
 const today = formattedDate(dateToday);
 const yesterday = formattedDate(
-  new Date(new Date().setDate(dateToday.getDate() - 1))
+  new Date(new Date().setDate(dateToday.getDate() - 1)),
 );
 const tomorrow = formattedDate(
-  new Date(new Date().setDate(dateToday.getDate() + 1))
+  new Date(new Date().setDate(dateToday.getDate() + 1)),
 );
 
 todos.add({ title: "Submit assignment", dueDate: yesterday, completed: false });
@@ -100,4 +100,4 @@ let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater);
 console.log(formattedItemsDueLater);
 console.log("\n\n");
 
-module.exports=todoList;
+module.exports = todoList;
