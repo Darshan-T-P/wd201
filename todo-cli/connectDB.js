@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 const Sequelize = require("sequelize");
 
 const database = "todo_db";
@@ -7,7 +6,7 @@ const password = "database";
 const sequelize = new Sequelize(database, username, password, {
   host: "localhost",
   dialect: "postgres",
-  logging:false,
+  logging: false,
 });
 
 // sequelize
@@ -20,11 +19,10 @@ const sequelize = new Sequelize(database, username, password, {
 //   });
 
 const connect = async () => {
-    return sequelize.authenticate();
-  }
-  
-  // eslint-disable-next-line no-undef
-  module.exports = {
-    connect,
-    sequelize
-  }
+  return sequelize.authenticate();
+};
+
+module.exports = {
+  connect,
+  sequelize,
+};
