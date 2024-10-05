@@ -107,14 +107,25 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     displayableString() {
-      const formattedDate = (date) => {
-        return date.toISOString().split("T")[0]; // Format the date as YYYY-MM-DD
-      };
       const checkbox = this.completed ? "[x]" : "[ ]";
-      const dueDateStr = this.completed ? "" : this.dueDate;
-
-      return `${this.id}. ${checkbox} ${this.title} ${dueDateStr}`;
-    }
+      const today = new Date().toISOString().split("T")[0]; // Format: YYYY-MM-DD
+  
+      // Determine if the task is due today
+      const isToday = this.dueDate === today;
+  
+      // Format based on completion status and due date
+      if (this.completed) {
+          // For completed items
+          return isToday 
+              ? `${this.id}. ${checkbox} ${this.title}` // Completed and due today
+              : `${this.id}. ${checkbox} ${this.title} ${this.dueDate}`; // Completed and past due
+      } else {
+          // For incomplete items
+          return isToday 
+              ? `${this.id}. ${checkbox} ${this.title}` // Incomplete and due today
+              : `${this.id}. ${checkbox} ${this.title} ${this.dueDate}`; // Incomplete and due later
+      }
+  }
   }
 
   Todo.init(
