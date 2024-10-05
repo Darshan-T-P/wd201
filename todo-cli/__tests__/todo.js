@@ -80,7 +80,7 @@ describe("Todolist Test Suite", () => {
     const todoItemsCount = await db.Todo.count();
     await db.Todo.addTask({
       title: "Test todo",
-      completed: false,
+      completed: true,
       dueDate: new Date(),
     });
     const newTodoItemsCount = await db.Todo.count();
