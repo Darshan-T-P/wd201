@@ -1,1 +1,1 @@
-
+cd todo-app && npx lint-staged
